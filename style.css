@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    background: linear-gradient(to top, #FFB6C1, #FF6347); /* Feminine pink tones */
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CV Container */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    background-color: #FF6347; /* Soft coral color */
+    color: white;
+    width: 35%;
+    padding: 25px;
+    border-radius: 12px 0 0 12px;
+    flex: 1; /* Let it shrink or grow */
+}
+
+.profile-pic {
+    width: 120%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me, .skills {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    background-color: white;
+    color: #FF6347;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #4d4d4d;
+}
+
+.skills ul {
+    margin-top: 10px;
+}
+
+/* Main Content */
+.main-content {
+    width: 65%;
+    padding: 25px;
+    background-color: #F9F9F9; /* Subtle grey background */
+    flex: 2; /* Let it take more space */
+}
+
+.personal-info h1 {
+    color: #FF6347;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.personal-info p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.personal-info p strong {
+    color: #FF6347;
+}
+
+/* Experience, Education */
+.experience h2, .education h2, .skills-summary h2 {
+    background-color: #FF6347;
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.job, .school {
+    margin-bottom: 20px;
+}
+
+.job h3, .school h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.job span, .school span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/* Skills Section */
+.skill {
+    background-color: #FF6347;
+    color: white;
+    padding: 5px 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Hidden Class for Toggle */
+.hidden {
+    display: none;
+}
+
+/* Button Styling */
+.toggle-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55347;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cv-container {
+        flex-direction: row;
+        margin: 10px;
+    }
+
+    .left-sidebar {
+        width: 40%;
+    }
+
+    .main-content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .left-sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 100%;
+        max-width: 180px;
+        margin: 10px auto;
+    }
+
+    .personal-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .personal-info p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .skill {
+        padding: 4px 10px;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile Design */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .cv-container {
+        margin: 5px;
+    }
+
+    .profile-pic {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .personal-info h1 {
+        font-size: 2rem;
+    }
+
+    .personal-info p {
+        font-size: 1rem;
+    }
+
+    .skills-summary h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    .skill {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+}
